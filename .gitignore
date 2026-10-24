@@ -9,3 +9,4 @@ secret/node*
 .terraform.lock.hcl
 *.log
 tmp/*
+var/*.tfvars

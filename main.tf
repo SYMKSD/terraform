@@ -12,7 +12,7 @@ terraform {
       source  = "hashicorp/google"
       version = "8.3.0"
     }
-  }  
+  }
   backend "local" {}
   // backend "remote" {
   //   hostname = "app.terraform.io"
@@ -21,5 +21,17 @@ terraform {
   //     prefix = "sloopstash-"
   //   }
   // }
+}
+
+module "kubernetes_aws" {
+  source = "./module/kubernetes/aws"
+  environment = var.environment
+  ssh_public_key = var.ssh_public_key
+}
+module "kubernetes_azure" {
+  source = "./module/kubernetes/azure"
+  environment = var.environment
+  ssh_public_key = var.ssh_public_key
+  subscription_id = var.azure_subscription_id
 }
  

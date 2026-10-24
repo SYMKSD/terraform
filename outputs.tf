@@ -1,9 +1,7 @@
-output "aws_crm" {
-  value = module.aws_crm
+output "kubernetes_aws" {
+  value = module.kubernetes_aws
 }
-output "aws_kubernetes" {
-  value = module.aws_kubernetes
+output "kubernetes_azure" {
+  value = module.kubernetes_azure
 }
-output "azure_kubernetes" {
-  value = module.azure_kubernetes
-}
+ 
